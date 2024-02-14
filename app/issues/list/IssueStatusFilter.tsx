@@ -30,7 +30,8 @@ const IssueStatusFilter = () => {
       <Select.Trigger placeholder="Filter by status..." />
       <Select.Content>
         {statuses.map((status) => (
-          <Select.Item key={status.value} value={status.value ?? "ALL"}>
+          //changed key to status.label from status.value to remove warning that key should be unique
+          <Select.Item key={status.label} value={status.value ?? "ALL"}>
             {status.label}
           </Select.Item>
         ))}
